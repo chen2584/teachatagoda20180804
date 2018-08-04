@@ -1,17 +1,17 @@
 {
-  "name": "techatagoda",
+  "name": "opensourceci",
   "private": true,
   "version": "0.0.0",
   "devDependencies": {
-    "@types/history": "4.6.0",
-    "@types/react": "15.0.35",
+    "@types/history": "4.6.2",
+    "@types/react": "15.0.38",
     "@types/react-dom": "15.5.1",
     "@types/react-hot-loader": "3.0.3",
     "@types/react-router": "4.0.12",
     "@types/react-router-dom": "4.0.5",
     "@types/webpack-env": "1.13.0",
-    "aspnet-webpack": "^2.0.1",
-    "aspnet-webpack-react": "^3.0.0",
+    "aspnet-webpack": "2.0.1",
+    "aspnet-webpack-react": "3.0.0",
     "awesome-typescript-loader": "3.2.1",
     "bootstrap": "3.3.7",
     "css-loader": "0.28.4",
@@ -30,5 +30,10 @@
     "url-loader": "0.5.9",
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2"
+  },
+  "resolutions": {
+    "@types/history": "4.6.2",
+    "@types/react": "15.0.38",
+    "@types/react-router": "4.0.12"
   }
 }
