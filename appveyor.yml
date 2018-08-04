@@ -16,6 +16,8 @@ dotnet_csproj:
 before_build:
 - ps: >-
 
+    cd src
+
     yarn install
 
     yarn webpack --config webpack.config.vendor.js
@@ -27,6 +29,12 @@ build:
   project: techatagoda.csproj
   publish_aspnet_core: true
   verbosity: minimal
+test_script:
+- ps: >-
+    & $env:USERPROFILE\.nuget\packages\opencover\4.6.519\tools\OpenCover.Console.exe -register:user -oldStyle -target:"dotnet.exe" -targetargs:"test stage3\tests\tests.csproj" -filter:"+[opensourceci*]* +[tests*]*" -output:"coverage.xml"
+    choco install codecov
+    
+    codecov -f coverage.xml
 notifications:
 - provider: GitHubPullRequest
   on_build_success: true
