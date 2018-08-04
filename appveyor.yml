@@ -16,6 +16,8 @@ dotnet_csproj:
 before_build:
 - ps: >-
 
+    dotnet restore
+
     cd src
 
     yarn install
@@ -23,8 +25,7 @@ before_build:
     yarn webpack --config webpack.config.vendor.js
 
     yarn webpack
-
-    dotnet restore
+    
 build:
   project: techatagoda.sln
   publish_aspnet_core: true
