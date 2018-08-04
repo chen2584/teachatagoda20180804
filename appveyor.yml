@@ -26,7 +26,7 @@ before_build:
 
     dotnet restore
 build:
-  project: techatagoda.csproj
+  project: src/techatagoda.csproj
   publish_aspnet_core: true
   verbosity: minimal
 test_script:
